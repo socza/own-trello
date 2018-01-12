@@ -27,7 +27,7 @@ $(function() {
 			var $column = $('<div>').addClass('column');
 			var $columnTitle = $('<h1>').addClass('column-title').text(self.name);
 			var $columnCardList = $('<ul').addClass('column-card-list');
-			var $columnCardDelete = $('<button>').addClass('btn-delete').text('x');
+			var $columnDelete = $('<button>').addClass('btn-delete').text('x');
 			var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
 
 		}
