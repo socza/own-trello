@@ -26,11 +26,12 @@ $(function() {
 		function createColumn() {
 
 			// creating the blocks
+			
 			var $column = $('<div>').addClass('column');
-			var $columnTitle = $('<h1>').addClass('column-title').text(self.name);
+			var $columnTitle = $('<h4>').addClass('column-title').text(self.name);
+			var $columnDelete = $('<button>').addClass('btn-delete btn btn-sm btn-danger').text('Usuń kolumnę');
+			var $columnAddCard = $('<button>').addClass('add-card btn btn-sm btn-success').text('Dodaj kartę');
 			var $columnCardList = $('<ul>').addClass('column-card-list');
-			var $columnDelete = $('<button>').addClass('btn-delete').text('x');
-			var $columnAddCard = $('<button>').addClass('add-card').text('Dodaj kartę');
 
 			// binding to click event
 			$columnDelete.click(function() {
@@ -41,16 +42,18 @@ $(function() {
 
 			$columnAddCard.click(function(event) {
 
-				self.addCard(new Card(prompt("Wstaw nazwę karty")));
+				self.addCard(new Card(prompt("Wpisz zadanie do wykonania")));
 
 			});
 
 			// combining block and return the card
+			
+
 			$column.append($columnTitle)
-        		.append($columnDelete)
+				.append($columnDelete)
         		.append($columnAddCard)
         		.append($columnCardList);
-
+        	
         	return $column;
 		
 		}
@@ -85,8 +88,8 @@ $(function() {
     	
     		// creating the blocks
     		var $card = $('<li>').addClass('card');
+    		var $cardDelete = $('<button>').addClass('btn-delete btn btn-sm btn-danger').text('X');
     		var $cardDescription = $('<p>').addClass('card-description').text(self.description);
-    		var $cardDelete = $('<button>').addClass('btn-delete').text('x');
 
     		// binding to click event
     		$cardDelete.click(function(){
@@ -118,9 +121,11 @@ $(function() {
 	var board = {
     		
    		name: 'Kanban Board',
+   		
    		addColumn: function(column) {
-   		this.$element.append(column.$element);
-   		initSortable();
+   			
+   			this.$element.append(column.$element);
+   			initSortable();
     	
     	},
     
@@ -150,19 +155,21 @@ $(function() {
 	// CREATING COLUMNS
 	var todoColumn = new Column('Do zrobienia');
 	var doingColumn = new Column('Aktualne');
+	var correctionColumn = new Column('Do poprawy');
 	var doneColumn = new Column('Ukończone');
 
 	// ADDING COLUMNS TO THE BOARD
 	board.addColumn(todoColumn);
 	board.addColumn(doingColumn);
+	board.addColumn(correctionColumn);
 	board.addColumn(doneColumn);
 
 	// CREATING NEW CARDS
-	//var card1 = new Card('New task');
-	//var card2 = new Card('Create kanban boards');
+	var card1 = new Card('Nowe zadanie');
+	var card2 = new Card('Utwórz tablice kanban');
 
 	// ADDING CARDS TO COLUMNS
-	//todoColumn.addCard(card1);
-	//doingColumn.addCard(card2);
+	todoColumn.addCard(card1);
+	doneColumn.addCard(card2);
 
 })

@@ -1,0 +1,83 @@
+h1 {
+	text-align: left;
+	margin-left: 15px;
+}
+
+h4 {
+	margin-top: 0px;
+	margin-bottom: 10px;
+	width: 100%;
+	background-color: rgba(0,0,0, 0.8);
+	color: white;
+	border-radius: 5px;
+	line-height: 45px;
+	text-align: center;
+}
+
+li .btn-delete {
+	width: 16px;
+	height: 20px;
+	font-size: 12px;
+	padding: 0;
+	margin: 5px;
+}
+
+li .card-description {
+	background-color: gold;
+	box-shadow: 2px 2px 7px #000;
+	margin: 0;
+	padding: 5px;
+	margin: 5px;
+}
+
+.board {
+	
+}
+
+.column-container {
+	padding: 10px;
+	text-align: center;
+}
+
+.create-column {
+	margin-left: 15px;
+}
+
+.column {
+	border: 1px dashed black;
+	background: linear-gradient(white, silver );
+	padding: 10px;
+	float: left;
+	text-align: center;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+}
+
+.btn-delete {
+	margin: 5px 15px 15px 15px;
+	text-align: center;
+}
+
+.add-card {
+	margin: 5px 15px 15px 15px;
+	text-align: center;
+}
+
+.column-card-list {
+	padding: 20px;
+	margin: 0;
+}
+
+.card {
+	background-color: rgba(255,255,255, 0.0);
+	border: 0;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.card-placeholder {
+	background-color: white;
+	border: 1px dashed grey;
+	color: rgba(255,255,255, 0.0);
+}
