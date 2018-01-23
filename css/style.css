@@ -64,8 +64,8 @@ li .card-description {
 	text-align: center;
 }
 
-.column-card-list {
-	padding: 20px;
+.ui-sortable {
+	padding: 30px;
 	margin: 0;
 }
 
